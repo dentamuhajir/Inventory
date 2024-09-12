@@ -2,6 +2,7 @@ package com.dentamuhajir.inventory.service.impl;
 
 
 import com.dentamuhajir.inventory.dto.StockCreateRequestDTO;
+import com.dentamuhajir.inventory.dto.StockDetailResponseDTO;
 import com.dentamuhajir.inventory.dto.StockUpdateRequestDTO;
 import com.dentamuhajir.inventory.model.Stock;
 import com.dentamuhajir.inventory.repository.StockRepository;
@@ -40,8 +41,16 @@ public class StockServiceImpl implements StockService {
     }
 
     @Override
-    public Stock detailStock(Long id) {
-        return stockRepository.findById(id).get();
+    public StockDetailResponseDTO detailStock(Long id) {
+        Stock stock = stockRepository.findById(id).get();
+        StockDetailResponseDTO dto = new StockDetailResponseDTO();
+        dto.setItemName(stock.getItemName());
+        dto.setStockQuantity(stock.getStockQuantity());
+        dto.setSerialNumber(stock.getSerialNumber());
+        dto.setAdditionalInfo(stock.getAdditionalInfo());
+        dto.setImage(stock.getImage());
+
+        return dto;
     }
 
     @Override

@@ -1,6 +1,7 @@
 package com.dentamuhajir.inventory.controller;
 
 import com.dentamuhajir.inventory.dto.StockCreateRequestDTO;
+import com.dentamuhajir.inventory.dto.StockDetailResponseDTO;
 import com.dentamuhajir.inventory.dto.StockUpdateRequestDTO;
 import com.dentamuhajir.inventory.model.Stock;
 import com.dentamuhajir.inventory.service.StockService;
@@ -52,9 +53,9 @@ public class StockController {
     }
 
     @GetMapping("/detail/{id}")
-    public ResponseEntity<Stock> detailStock(@PathVariable Long id) {
+    public ResponseEntity<StockDetailResponseDTO> detailStock(@PathVariable Long id) {
         try {
-            Stock detailStock = stockService.detailStock(id);
+            StockDetailResponseDTO detailStock = stockService.detailStock(id);
             return new ResponseEntity<>(detailStock, HttpStatus.OK);
 
         } catch (Exception e){
