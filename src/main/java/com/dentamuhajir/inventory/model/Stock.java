@@ -19,7 +19,7 @@ public class Stock {
     @Column(name = "stock_quantity")
     private Integer stockQuantity;
 
-    @Column(name = "serial_number", unique = true)
+    @Column(name = "serial_number")
     private Integer serialNumber;
 
     @Column(name = "additional_info", columnDefinition = "JSON")

@@ -1,5 +1,6 @@
 package com.dentamuhajir.inventory.controller;
 
+import com.dentamuhajir.inventory.dto.StockCreateRequestDTO;
 import com.dentamuhajir.inventory.model.Stock;
 import com.dentamuhajir.inventory.service.StockService;
 import lombok.AllArgsConstructor;
@@ -16,9 +17,9 @@ public class StockController {
     private StockService stockService;
 
     @PostMapping
-    public ResponseEntity<Stock> createStock(@RequestBody Stock stock) {
+    public ResponseEntity<Stock> createStock(@RequestBody StockCreateRequestDTO dto) {
         try {
-            Stock createdStock = stockService.createStock(stock);
+            Stock createdStock = stockService.createStock(dto);
             return new ResponseEntity<>(createdStock, HttpStatus.CREATED);
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
