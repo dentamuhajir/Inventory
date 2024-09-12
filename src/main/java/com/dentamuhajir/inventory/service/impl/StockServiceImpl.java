@@ -2,11 +2,12 @@ package com.dentamuhajir.inventory.service.impl;
 
 
 import com.dentamuhajir.inventory.dto.StockCreateRequestDTO;
+import com.dentamuhajir.inventory.dto.StockUpdateRequestDTO;
 import com.dentamuhajir.inventory.model.Stock;
 import com.dentamuhajir.inventory.repository.StockRepository;
 import com.dentamuhajir.inventory.service.StockService;
-import jakarta.persistence.Column;
 import lombok.AllArgsConstructor;
+import org.apache.coyote.BadRequestException;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
@@ -44,9 +45,18 @@ public class StockServiceImpl implements StockService {
     }
 
     @Override
-    public Stock updateStock(Long id, Stock stock) {
+    public Stock updateStock(Long id, StockUpdateRequestDTO dto) {
         Stock existingStock = stockRepository.findById(id).get();
-        existingStock.setItemName(stock.getItemName());
+        existingStock.setItemName(dto.getItemName());
+        existingStock.setStockQuantity(dto.getStockQuantity());
+        existingStock.setSerialNumber(dto.getSerialNumber());
+        existingStock.setAdditionalInfo(dto.getAdditionalInfo());
+        existingStock.setImage(dto.getImage());
+        existingStock.setCreatedAt(new Date());
+        existingStock.setCreatedBy("Admin");
+        existingStock.setUpdatedAt(new Date());
+        existingStock.setUpdatedBy("Admin");
+
         return stockRepository.save(existingStock);
     }
 

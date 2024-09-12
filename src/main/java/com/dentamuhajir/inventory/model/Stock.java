@@ -39,4 +39,5 @@ public class Stock {
 
     @Column(name = "updated_by")
     private String updatedBy;
+
 }

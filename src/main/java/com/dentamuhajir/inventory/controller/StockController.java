@@ -1,6 +1,7 @@
 package com.dentamuhajir.inventory.controller;
 
 import com.dentamuhajir.inventory.dto.StockCreateRequestDTO;
+import com.dentamuhajir.inventory.dto.StockUpdateRequestDTO;
 import com.dentamuhajir.inventory.model.Stock;
 import com.dentamuhajir.inventory.service.StockService;
 import lombok.AllArgsConstructor;
@@ -37,9 +38,9 @@ public class StockController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Stock> updateStock(@PathVariable Long id, @RequestBody Stock stock) {
+    public ResponseEntity<Stock> updateStock(@PathVariable Long id, @RequestBody StockUpdateRequestDTO dto) {
         try {
-            Stock updatedStock = stockService.updateStock(id, stock);
+            Stock updatedStock = stockService.updateStock(id, dto);
             if (updatedStock != null) {
                 return ResponseEntity.ok(updatedStock);
             } else {
