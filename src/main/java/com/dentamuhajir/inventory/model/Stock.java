@@ -8,7 +8,7 @@ import java.util.Date;
 @Data
 @Entity
 @Table(name="stocks")
-public class Inventory {
+public class Stock {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private long id;
