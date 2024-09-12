@@ -10,7 +10,7 @@ import java.util.Date;
 @Table(name="stocks")
 public class Stock {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "stocks_seq")
     private long id;
 
     @Column(name = "item_name", nullable = false)
