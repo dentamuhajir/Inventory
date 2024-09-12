@@ -2,6 +2,7 @@ package com.dentamuhajir.inventory.controller;
 
 import com.dentamuhajir.inventory.dto.StockCreateRequestDTO;
 import com.dentamuhajir.inventory.dto.StockDetailResponseDTO;
+import com.dentamuhajir.inventory.dto.StockListResponseDTO;
 import com.dentamuhajir.inventory.dto.StockUpdateRequestDTO;
 import com.dentamuhajir.inventory.model.Stock;
 import com.dentamuhajir.inventory.service.StockService;
@@ -29,9 +30,9 @@ public class StockController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Stock>> findAllStock() {
+    public ResponseEntity<List<StockListResponseDTO>> findAllStock() {
         try {
-            List<Stock> stockList = stockService.listStocks();
+            List<StockListResponseDTO> stockList = stockService.listStocks();
             return new ResponseEntity<>(stockList, HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);

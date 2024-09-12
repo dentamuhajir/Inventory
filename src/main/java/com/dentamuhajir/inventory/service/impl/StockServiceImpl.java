@@ -1,8 +1,8 @@
 package com.dentamuhajir.inventory.service.impl;
 
-
 import com.dentamuhajir.inventory.dto.StockCreateRequestDTO;
 import com.dentamuhajir.inventory.dto.StockDetailResponseDTO;
+import com.dentamuhajir.inventory.dto.StockListResponseDTO;
 import com.dentamuhajir.inventory.dto.StockUpdateRequestDTO;
 import com.dentamuhajir.inventory.model.Stock;
 import com.dentamuhajir.inventory.repository.StockRepository;
@@ -11,6 +11,7 @@ import lombok.AllArgsConstructor;
 import org.apache.coyote.BadRequestException;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -36,8 +37,21 @@ public class StockServiceImpl implements StockService {
     }
 
     @Override
-    public List<Stock> listStocks() {
-        return stockRepository.findAll();
+    public List<StockListResponseDTO> listStocks() {
+        List<Stock> stocks  = stockRepository.findAll();
+        List<StockListResponseDTO> dtos = new ArrayList<>();
+
+        for (Stock stock : stocks) {
+            StockListResponseDTO dto = new StockListResponseDTO();
+            dto.setItemName(stock.getItemName());
+            dto.setStockQuantity(stock.getStockQuantity());
+            dto.setSerialNumber(stock.getSerialNumber());
+            dto.setAdditionalInfo(stock.getAdditionalInfo());
+            dto.setImage(stock.getImage());
+            dtos.add(dto);
+        }
+
+        return dtos;
     }
 
     @Override
@@ -73,6 +87,4 @@ public class StockServiceImpl implements StockService {
     public void deleteStock(Long id) {
         stockRepository.deleteById(id);
     }
-
-
 }
