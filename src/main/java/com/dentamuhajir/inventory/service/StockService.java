@@ -6,7 +6,8 @@ import java.util.List;
 
 public interface StockService {
     Stock createStock(Stock stock);
-    List<Stock> listAllStocks();
-    Stock updateStock(Long id,Stock stock);
+    List<Stock> listStocks();
+    Stock detailStock(Long id);
+    Stock updateStock(Long id, Stock stock);
     void deleteStock(Long id);
 }

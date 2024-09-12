@@ -28,7 +28,7 @@ public class StockController {
     @GetMapping
     public ResponseEntity<List<Stock>> findAllStock() {
         try {
-            List<Stock> stockList = stockService.listAllStocks();
+            List<Stock> stockList = stockService.listStocks();
             return new ResponseEntity<>(stockList, HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
@@ -46,6 +46,17 @@ public class StockController {
             }
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
+    }
+
+    @GetMapping("/detail/{id}")
+    public ResponseEntity<Stock> detailStock(@PathVariable Long id) {
+        try {
+            Stock detailStock = stockService.detailStock(id);
+            return new ResponseEntity<>(detailStock, HttpStatus.OK);
+
+        } catch (Exception e){
+            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
