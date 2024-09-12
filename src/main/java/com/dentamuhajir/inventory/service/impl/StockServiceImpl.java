@@ -7,6 +7,7 @@ import com.dentamuhajir.inventory.service.StockService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -16,7 +17,10 @@ public class StockServiceImpl implements StockService {
 
     @Override
     public Stock createStock(Stock stock) {
-        return null;
+        if (stock.getCreatedAt() == null) {
+            stock.setCreatedAt(new Date());
+        }
+        return stockRepository.save(stock);
     }
 
     @Override
