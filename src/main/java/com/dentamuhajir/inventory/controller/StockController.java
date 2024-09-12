@@ -35,6 +35,20 @@ public class StockController {
         }
     }
 
+    @PutMapping("/{id}")
+    public ResponseEntity<Stock> updateStock(@PathVariable Long id, @RequestBody Stock stock) {
+        try {
+            Stock updatedStock = stockService.updateStock(id, stock);
+            if (updatedStock != null) {
+                return ResponseEntity.ok(updatedStock);
+            } else {
+                return ResponseEntity.notFound().build();
+            }
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
+    }
+
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteStock(@PathVariable Long id) {
         stockService.deleteStock(id);

@@ -29,8 +29,10 @@ public class StockServiceImpl implements StockService {
     }
 
     @Override
-    public Stock updateStock(Stock stock) {
-        return null;
+    public Stock updateStock(Long id, Stock stock) {
+        Stock existingStock = stockRepository.findById(id).get();
+        existingStock.setItemName(stock.getItemName());
+        return stockRepository.save(existingStock);
     }
 
     @Override
