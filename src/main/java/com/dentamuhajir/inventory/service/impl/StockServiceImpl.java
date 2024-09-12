@@ -1,8 +1,9 @@
-package com.dentamuhajir.inventory.service;
+package com.dentamuhajir.inventory.service.impl;
 
 
 import com.dentamuhajir.inventory.model.Stock;
 import com.dentamuhajir.inventory.repository.StockRepository;
+import com.dentamuhajir.inventory.service.StockService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
