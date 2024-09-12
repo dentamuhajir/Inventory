@@ -27,4 +27,14 @@ public class StockServiceImpl implements StockService {
     public List<Stock> listAllStocks() {
         return stockRepository.findAll();
     }
+
+    @Override
+    public Stock updateStock(Stock stock) {
+        return null;
+    }
+
+    @Override
+    public void deleteStock(Long id) {
+        stockRepository.deleteById(id);
+    }
 }
