@@ -31,9 +31,7 @@ public class StockServiceImpl implements StockService {
         stock.setSerialNumber(dto.getSerialNumber());
         stock.setAdditionalInfo(dto.getAdditionalInfo());
 
-        // Handle image file (save it to a directory, database, or cloud storage)
-        // Implement your file storage logic here
-        stock.setImage(image.getOriginalFilename());
+        stock.setImage("uploads/" + image.getOriginalFilename());
         stock.setCreatedAt(new Date());
         stock.setCreatedBy("Admin");
         stock.setUpdatedAt(new Date());
