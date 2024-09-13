@@ -8,6 +8,8 @@ import com.dentamuhajir.inventory.model.Stock;
 import com.dentamuhajir.inventory.repository.StockRepository;
 import com.dentamuhajir.inventory.service.StockService;
 import lombok.AllArgsConstructor;
+import lombok.extern.java.Log;
+import lombok.extern.log4j.Log4j2;
 import org.apache.coyote.BadRequestException;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +19,7 @@ import java.util.List;
 
 @Service
 @AllArgsConstructor
+@Log4j2
 public class StockServiceImpl implements StockService {
     private StockRepository stockRepository;
 
@@ -38,6 +41,8 @@ public class StockServiceImpl implements StockService {
 
     @Override
     public List<StockListResponseDTO> listStocks() {
+        log.info("Get List Data");
+
         List<Stock> stocks  = stockRepository.findAll();
         List<StockListResponseDTO> dtos = new ArrayList<>();
 

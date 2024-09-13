@@ -1,0 +1,95 @@
+2024-09-13 08:28:12 INFO  com.dentamuhajir.inventory.InventoryApplication - Starting InventoryApplication using Java 17.0.9 with PID 10060 (/Users/dentamuhajir/Downloads/TASK BACKEND/inventory/target/classes started by dentamuhajir in /Users/dentamuhajir/Downloads/TASK BACKEND/inventory)
+2024-09-13 08:28:12 INFO  com.dentamuhajir.inventory.InventoryApplication - No active profile set, falling back to 1 default profile: "default"
+2024-09-13 08:28:14 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-13 08:28:14 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 86 ms. Found 1 JPA repository interface.
+2024-09-13 08:28:15 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-09-13 08:28:15 INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-13 08:28:15 INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2024-09-13 08:28:15 INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-13 08:28:15 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-09-13 08:28:15 INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2386 ms
+2024-09-13 08:28:15 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-13 08:28:15 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-13 08:28:15 INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-09-13 08:28:16 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-13 08:28:16 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-09-13 08:28:17 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2166c48a
+2024-09-13 08:28:17 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-09-13 08:28:18 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-13 08:28:19 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-13 08:28:19 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-13 08:28:20 INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-13 08:28:20 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-09-13 08:28:20 INFO  com.dentamuhajir.inventory.InventoryApplication - Started InventoryApplication in 8.078 seconds (process running for 10.178)
+2024-09-13 08:28:23 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-13 08:28:23 INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-09-13 08:28:23 INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-09-13 08:28:23 INFO  com.dentamuhajir.inventory.controller.StockController - Listing stock : {}
+2024-09-13 08:28:23 INFO  com.dentamuhajir.inventory.service.impl.StockServiceImpl - Get List Data
+2024-09-13 08:32:07 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-13 08:32:07 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-09-13 08:32:07 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-09-13 08:32:16 INFO  com.dentamuhajir.inventory.InventoryApplication - Starting InventoryApplication using Java 17.0.9 with PID 10183 (/Users/dentamuhajir/Downloads/TASK BACKEND/inventory/target/classes started by dentamuhajir in /Users/dentamuhajir/Downloads/TASK BACKEND/inventory)
+2024-09-13 08:32:16 INFO  com.dentamuhajir.inventory.InventoryApplication - No active profile set, falling back to 1 default profile: "default"
+2024-09-13 08:32:17 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-13 08:32:17 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 84 ms. Found 1 JPA repository interface.
+2024-09-13 08:32:18 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-09-13 08:32:18 INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-13 08:32:18 INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2024-09-13 08:32:18 INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-13 08:32:18 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-09-13 08:32:18 INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2149 ms
+2024-09-13 08:32:18 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-13 08:32:18 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-13 08:32:18 INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-09-13 08:32:19 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-13 08:32:19 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-09-13 08:32:20 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@ce2eaa7
+2024-09-13 08:32:20 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-09-13 08:32:21 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-13 08:32:21 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-13 08:32:22 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-13 08:32:22 INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-13 08:32:22 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-09-13 08:32:22 INFO  com.dentamuhajir.inventory.InventoryApplication - Started InventoryApplication in 7.013 seconds (process running for 9.14)
+2024-09-13 08:33:24 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-13 08:33:24 INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-09-13 08:33:24 INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2024-09-13 08:33:24 WARN  org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'multipart/form-data;boundary=--------------------------091998602695764218142342;charset=UTF-8' is not supported]
+2024-09-13 08:33:39 INFO  com.dentamuhajir.inventory.controller.StockController - Creating stock with request: StockCreateRequestDTO(itemName=Test LOG, stockQuantity=50, serialNumber=13, additionalInfo={"warranty": "2 years"}, image=laptop-image-url)
+2024-09-13 08:33:39 WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1062, SQLState: 23000
+2024-09-13 08:33:39 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Duplicate entry '13' for key 'stocks.UKiu552hjijg15ix9tk1b162tsc'
+2024-09-13 08:33:47 INFO  com.dentamuhajir.inventory.controller.StockController - Creating stock with request: StockCreateRequestDTO(itemName=Test LOG, stockQuantity=50, serialNumber=12345, additionalInfo={"warranty": "2 years"}, image=laptop-image-url)
+2024-09-13 08:33:47 INFO  com.dentamuhajir.inventory.controller.StockController - Stock created successfully: Stock(id=353, itemName=Test LOG, stockQuantity=50, serialNumber=12345, additionalInfo={"warranty": "2 years"}, image=laptop-image-url, createdAt=Fri Sep 13 08:33:47 WIB 2024, createdBy=Admin, updatedAt=Fri Sep 13 08:33:47 WIB 2024, updatedBy=Admin)
+2024-09-13 08:49:09 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-13 08:49:09 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-09-13 08:49:09 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-09-13 08:49:17 INFO  com.dentamuhajir.inventory.InventoryApplication - Starting InventoryApplication using Java 17.0.9 with PID 10458 (/Users/dentamuhajir/Downloads/TASK BACKEND/inventory/target/classes started by dentamuhajir in /Users/dentamuhajir/Downloads/TASK BACKEND/inventory)
+2024-09-13 08:49:17 INFO  com.dentamuhajir.inventory.InventoryApplication - No active profile set, falling back to 1 default profile: "default"
+2024-09-13 08:49:18 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-13 08:49:18 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 100 ms. Found 1 JPA repository interface.
+2024-09-13 08:49:19 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-09-13 08:49:19 INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-13 08:49:19 INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2024-09-13 08:49:19 INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-13 08:49:19 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-09-13 08:49:19 INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2284 ms
+2024-09-13 08:49:19 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-13 08:49:19 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-13 08:49:19 INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-09-13 08:49:20 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-13 08:49:20 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-09-13 08:49:20 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2570b316
+2024-09-13 08:49:20 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-09-13 08:49:22 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-13 08:49:22 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-13 08:49:22 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-13 08:49:23 INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-13 08:49:23 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-09-13 08:49:23 INFO  com.dentamuhajir.inventory.InventoryApplication - Started InventoryApplication in 7.115 seconds (process running for 9.204)
+2024-09-13 08:49:45 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-13 08:49:45 INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-09-13 08:49:45 INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-09-13 08:49:45 INFO  com.dentamuhajir.inventory.controller.StockController - Get listing stock request 
+2024-09-13 08:49:45 INFO  com.dentamuhajir.inventory.service.impl.StockServiceImpl - Get List Data
+2024-09-13 08:49:46 INFO  com.dentamuhajir.inventory.controller.StockController - Get listing stock response: [StockListResponseDTO(itemName=Laptop Update DTO, stockQuantity=50, serialNumber=12365, additionalInfo={"warranty": "2 years"}, image=laptop-image-url), StockListResponseDTO(itemName=Laptop Acer, stockQuantity=50, serialNumber=1234561, additionalInfo={"warranty": "2 years"}, image=laptop-image-url), StockListResponseDTO(itemName=HP Acer, stockQuantity=50, serialNumber=12345611, additionalInfo={"warranty": "2 years"}, image=laptop-image-url), StockListResponseDTO(itemName=Test Generate ID, stockQuantity=50, serialNumber=21345, additionalInfo={"warranty": "2 years"}, image=laptop-image-url), StockListResponseDTO(itemName=Test Generate ID h, stockQuantity=50, serialNumber=98, additionalInfo={"warranty": "2 years"}, image=laptop-image-url), StockListResponseDTO(itemName=Test Generate IfeD h, stockQuantity=50, serialNumber=598, additionalInfo={"warranty": "2 years"}, image=laptop-image-url), StockListResponseDTO(itemName=5678, stockQuantity=50, serialNumber=899, additionalInfo={"warranty": "2 years"}, image=laptop-image-url), StockListResponseDTO(itemName=5678, stockQuantity=50, serialNumber=6, additionalInfo={"warranty": "2 years"}, image=laptop-image-url), StockListResponseDTO(itemName=5678, stockQuantity=50, serialNumber=698, additionalInfo={"warranty": "2 years"}, image=laptop-image-url), StockListResponseDTO(itemName=Test DTO, stockQuantity=50, serialNumber=1, additionalInfo={"warranty": "2 years"}, image=laptop-image-url), StockListResponseDTO(itemName=Test DTO lagi, stockQuantity=50, serialNumber=13, additionalInfo={"warranty": "2 years"}, image=laptop-image-url), StockListResponseDTO(itemName=Test LOG, stockQuantity=50, serialNumber=12345, additionalInfo={"warranty": "2 years"}, image=laptop-image-url)] 
