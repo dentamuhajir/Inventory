@@ -47,10 +47,8 @@ public class StockServiceImpl implements StockService {
 
         for (Stock stock : stocks) {
             StockListResponseDTO dto = new StockListResponseDTO();
+            dto.setId(stock.getId());
             dto.setItemName(stock.getItemName());
-            dto.setStockQuantity(stock.getStockQuantity());
-            dto.setSerialNumber(stock.getSerialNumber());
-            dto.setAdditionalInfo(stock.getAdditionalInfo());
             dto.setImage(stock.getImage());
             dtos.add(dto);
         }
@@ -62,6 +60,7 @@ public class StockServiceImpl implements StockService {
     public StockDetailResponseDTO detailStock(Long id) {
         Stock stock = stockRepository.findById(id).get();
         StockDetailResponseDTO dto = new StockDetailResponseDTO();
+        dto.setId(stock.getId());
         dto.setItemName(stock.getItemName());
         dto.setStockQuantity(stock.getStockQuantity());
         dto.setSerialNumber(stock.getSerialNumber());

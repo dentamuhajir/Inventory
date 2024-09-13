@@ -38,7 +38,7 @@ public class StockController {
         StockCreateRequestDTO dto = new StockCreateRequestDTO();
         dto.setItemName(itemName);
         dto.setStockQuantity(Integer.parseInt(stockQuantity));
-        dto.setSerialNumber(Integer.parseInt(serialNumber));
+        dto.setSerialNumber(serialNumber);
         dto.setAdditionalInfo(additionalInfo);
         logger.info("Creating stock with request: {}", dto);
 

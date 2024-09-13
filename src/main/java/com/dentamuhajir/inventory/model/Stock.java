@@ -20,7 +20,7 @@ public class Stock {
     private Integer stockQuantity;
 
     @Column(name = "serial_number")
-    private Integer serialNumber;
+    private String serialNumber;
 
     @Column(name = "additional_info", columnDefinition = "JSON")
     private String additionalInfo;

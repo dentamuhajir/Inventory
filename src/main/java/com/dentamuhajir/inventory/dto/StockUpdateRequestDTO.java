@@ -6,7 +6,7 @@ import lombok.Data;
 public class StockUpdateRequestDTO {
     private String itemName;
     private Integer stockQuantity;
-    private Integer serialNumber;
+    private String serialNumber;
     private String additionalInfo;
     private String image;
 }
