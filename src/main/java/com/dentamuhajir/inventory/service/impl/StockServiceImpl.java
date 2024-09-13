@@ -8,11 +8,11 @@ import com.dentamuhajir.inventory.model.Stock;
 import com.dentamuhajir.inventory.repository.StockRepository;
 import com.dentamuhajir.inventory.service.StockService;
 import lombok.AllArgsConstructor;
-import lombok.extern.java.Log;
 import lombok.extern.log4j.Log4j2;
-import org.apache.coyote.BadRequestException;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -24,13 +24,16 @@ public class StockServiceImpl implements StockService {
     private StockRepository stockRepository;
 
     @Override
-    public Stock createStock(StockCreateRequestDTO dto) {
+    public Stock createStock(StockCreateRequestDTO dto, MultipartFile image) throws IOException {
         Stock stock = new Stock();
         stock.setItemName(dto.getItemName());
         stock.setStockQuantity(dto.getStockQuantity());
         stock.setSerialNumber(dto.getSerialNumber());
         stock.setAdditionalInfo(dto.getAdditionalInfo());
-        stock.setImage(dto.getImage());
+
+        // Handle image file (save it to a directory, database, or cloud storage)
+        // Implement your file storage logic here
+        stock.setImage(image.getOriginalFilename());
         stock.setCreatedAt(new Date());
         stock.setCreatedBy("Admin");
         stock.setUpdatedAt(new Date());
@@ -41,8 +44,6 @@ public class StockServiceImpl implements StockService {
 
     @Override
     public List<StockListResponseDTO> listStocks() {
-        log.info("Get List Data");
-
         List<Stock> stocks  = stockRepository.findAll();
         List<StockListResponseDTO> dtos = new ArrayList<>();
 

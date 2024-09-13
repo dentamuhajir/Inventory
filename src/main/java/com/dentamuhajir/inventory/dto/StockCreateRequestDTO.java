@@ -8,5 +8,5 @@ public class StockCreateRequestDTO {
     private Integer stockQuantity;
     private Integer serialNumber;
     private String additionalInfo;
-    private String image;
+    //private String image;
 }

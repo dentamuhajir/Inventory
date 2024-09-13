@@ -8,12 +8,15 @@ import com.dentamuhajir.inventory.model.Stock;
 import com.dentamuhajir.inventory.service.StockService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.util.Arrays;
 import java.util.List;
 
 @RestController
@@ -25,16 +28,37 @@ public class StockController {
     private static final Logger logger = LogManager.getLogger(StockController.class);
 
     @PostMapping
-    public ResponseEntity<Stock> createStock(@RequestBody StockCreateRequestDTO dto) {
+    public ResponseEntity<Stock> createStock(
+            @RequestParam(value = "itemName", required = false) String itemName,
+            @RequestParam(value = "stockQuantity", required = false) String stockQuantity,
+            @RequestParam(value= "serialNumber", required = false) String serialNumber,
+            @RequestParam(value ="additionalInfo", required = false) String additionalInfo,
+            @RequestParam("image") MultipartFile image
+    ) {
+        StockCreateRequestDTO dto = new StockCreateRequestDTO();
+        dto.setItemName(itemName);
+        dto.setStockQuantity(Integer.parseInt(stockQuantity));
+        dto.setSerialNumber(Integer.parseInt(serialNumber));
+        dto.setAdditionalInfo(additionalInfo);
         logger.info("Creating stock with request: {}", dto);
+
+        if (!isValidImage(image)) {
+            logger.error("Invalid file type. Only JPG and PNG are allowed.");
+            return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
+        }
+
         try {
-            Stock createdStock = stockService.createStock(dto);
+            Stock createdStock = stockService.createStock(dto, image);
             logger.info("Stock created successfully: {}", createdStock);
             return new ResponseEntity<>(createdStock, HttpStatus.CREATED);
         } catch (Exception e) {
             logger.error("Failed to created stock :", e);
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
+    }
+    private boolean isValidImage(MultipartFile file) {
+        String contentType = file.getContentType();
+        return Arrays.asList("image/jpeg", "image/png").contains(contentType);
     }
 
     @GetMapping
